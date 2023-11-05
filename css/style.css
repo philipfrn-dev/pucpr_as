@@ -1,0 +1,142 @@
+/* Estilo global para todas as páginas */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@100;300&display=swap');
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #f5f5f5;
+  
+    
+}
+
+header {
+    background-color: #f9f9f9;
+    color: #fff;
+    padding: 35px;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+header img{
+    width: 65px;
+    height: 65px;;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+   
+    
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:#007BFF;
+    font-size: 20px;
+
+}
+
+main {
+    margin: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Estilos para o formulário */
+.container {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form {
+    text-align: left;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para o formulário na página de ação */
+#meuFormulario { /* Use o ID do formulário para aplicar os estilos na página de ação */
+    text-align: left;
+    
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+#meuFormulario label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#meuFormulario input,
+#meuFormulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#meuFormulario input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Estilos para as imagens */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    
+  }
+  
+  #image-item {
+    max-width: 100%;
+    height: auto;
+    margin: 0 10px; /* Espaçamento horizontal entre as imagens */
+    border-radius: 35px;
+    
+
+  }
+
+/* Outros estilos... */

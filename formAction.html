@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Página de Ação</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/discussao.png" alt="" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="form.html">Formulário</a></li>
+          <li><a href="about.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Página de Ação</h1>
+      <div id="resultado"></div>
+      <div id="portalDuvidas"></div>
+    </main>
+    <script>
+      // Função para obter os parâmetros da URL
+      function getParameters() {
+        var params = {};
+        var url = window.location.href;
+        var paramsStart = url.indexOf("?");
+
+        if (paramsStart != -1) {
+          var paramString = url.substring(paramsStart + 1);
+          paramString = decodeURIComponent(paramString);
+          var paramsArray = paramString.split("&");
+
+          for (var i = 0; i < paramsArray.length; i++) {
+            var pairArray = paramsArray[i].split("=");
+            if (pairArray.length === 2) {
+              params[pairArray[0]] = pairArray[1];
+            }
+          }
+        }
+
+        return params;
+      }
+
+      // Obter os parâmetros da URL
+      var params = getParameters();
+
+      // Exibir os dados na página
+      var resultado = document.getElementById("resultado");
+      resultado.innerHTML = `Nome: ${
+        params.nome || "Não especificado"
+      }<br>Email: ${params.email || "Não especificado"}`;
+
+      // Exibir o campo "Portal de Dúvidas"
+      var portalDuvidas = document.getElementById("portalDuvidas");
+      portalDuvidas.innerHTML = `Portal de Dúvidas: ${
+        params.portalDuvidas || "Não especificado"
+      }`;
+    </script>
+  </body>
+</html>

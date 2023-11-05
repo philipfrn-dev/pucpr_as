@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/script.js"></script>
+    <!-- Vincula o arquivo JavaScript externo para funcionalidade interativa -->
+    <title>Formulário</title>
+    <!-- Define o título da página exibido na aba do navegador -->
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/discussao.png" alt="" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="form.html">Formulário</a></li>
+          <li><a href="about.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Formulário</h1>
+      <div class="container">
+        <form
+          id="meuFormulario"
+          action="formAction.html"
+          method="get"
+          onsubmit="return enviarFormulario()"
+        >
+          <label for="nome">Nome:</label>
+          <!-- Rótulo para o campo de nome -->
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">Email:</label>
+          <!-- Rótulo para o campo de email -->
+          <input type="email" id="email" name="email" required />
+
+          <label for="portalDuvidas">Portal de Dúvidas:</label>
+          <!-- Rótulo para o campo de duvidas -->
+          <textarea id="portalDuvidas" name="portalDuvidas" required></textarea>
+
+          <input type="submit" value="Enviar" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
